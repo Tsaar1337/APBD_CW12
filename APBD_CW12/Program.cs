@@ -14,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<_2019sbdContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
 builder.Services.AddScoped<ITripsService, TripsService>();
+builder.Services.AddScoped<IClientsService, ClientsService>();
 
 
 var app = builder.Build();
